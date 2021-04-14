@@ -25,9 +25,6 @@ RUN apk add --no-cache \
     bash \
     groff
 
-ADD https://codecov.io/bash /bin/codecov
-RUN chmod +x /bin/codecov
-
 COPY --from=build /usr/local/aws-cli/ /usr/local/aws-cli/
 COPY --from=build /usr/local/bin/ /usr/local/bin/
 COPY --from=build /usr/lib/ /usr/lib/
